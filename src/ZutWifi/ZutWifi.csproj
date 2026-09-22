@@ -13,7 +13,8 @@
     <Version>1.0.0</Version>
     <!-- 资源管理器/桌面/任务栏上那个文件图标。与下面内嵌的那一份是同一个 ico：
          ApplicationIcon 由编译器打进 PE 资源，内嵌那份给窗口与「关于」页用。
-         生成物，别手工改：python tools/make-icons.py（原图 assets/中工logo.png 在仓库里）。 -->
+         生成物，别手工改：python tools/make-icons.py（想换成自己的徽标，把图存成 assets/logo.png，
+         那个路径在 .gitignore 里，仓库只带内置的中性标记）。 -->
     <ApplicationIcon>..\..\assets\app.ico</ApplicationIcon>
     <!-- InvariantGlobalization 必须保持 false：门户页面是 GBK(codepage 936)，开了全球化不变式
          运行期就取不到该编码。发布用的 RID / SelfContained / PublishSingleFile 一律由 build.ps1

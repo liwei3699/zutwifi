@@ -68,8 +68,8 @@ public class BrandAssetTests
         Assert.Contains($"LogicalName=\"{AppBrand.IconResourceName}\"", csproj);
         Assert.Contains($"LogicalName=\"{AppBrand.LogoResourceName}\"", csproj);
         Assert.Contains("<ApplicationIcon>..\\..\\assets\\app.ico</ApplicationIcon>", csproj);
-        // 1.4 MB 的原图是**生成素材**，不是交付内容：它进 exe 只是让同学多下载 1.4 MB。
-        Assert.DoesNotContain("EmbeddedResource Include=\"..\\..\\assets\\中工logo.png\"", csproj);
+        // 来源图（各人自己的徽标，assets/logo.png）是生成素材，不是交付内容：它进 exe 只是让同学多下载一截。
+        Assert.DoesNotContain("EmbeddedResource Include=\"..\\..\\assets\\logo.png\"", csproj);
         Assert.Contains("assets\\app.ico", csproj);
     }
 
