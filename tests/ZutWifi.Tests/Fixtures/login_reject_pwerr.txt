@@ -1,0 +1,2 @@
+HTTP/1.1 302 Moved Temporarily
+Location: http://1.1.1.1:80/2.htm?wlanuserip=10.133.126.113&ACLogOut=5&ErrorMsg=Nw%3D%3D

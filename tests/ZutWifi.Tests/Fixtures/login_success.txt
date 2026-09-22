@@ -1,0 +1,5 @@
+HTTP/1.1 302 Moved Temporarily
+Server: OMPXY/1.4.7
+X-Powered-By: PHP/5.4.45
+Access-Control-Allow-Origin: *
+Location: http://1.1.1.1:80/3.htm?wlanuserip=10.133.126.113&wlanacname=ZYGXY-ME60-X16&wlanacip=10.10.9.200&mac=00-00-00-00-00-00&session=

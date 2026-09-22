@@ -1,0 +1,2 @@
+HTTP/1.1 302 Moved Temporarily
+Location: http://1.1.1.1:/2.htm?wlanuserip=10.133.126.113&wlanacname=ZYGXY-ME60-X16&wlanacip=10.10.9.200&mac=02a1b2c3d4e5&session=null&ACLogOut=1

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>ZutWifi</AssemblyName>
+    <RootNamespace>ZutWifi</RootNamespace>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <Version>1.0.0</Version>
+    <!-- 资源管理器/桌面/任务栏上那个文件图标。与下面内嵌的那一份是同一个 ico：
+         ApplicationIcon 由编译器打进 PE 资源，内嵌那份给窗口与「关于」页用。
+         生成物，别手工改：python tools/make-icons.py（原图 assets/中工logo.png 在仓库里）。 -->
+    <ApplicationIcon>..\..\assets\app.ico</ApplicationIcon>
+    <!-- InvariantGlobalization 必须保持 false：门户页面是 GBK(codepage 936)，开了全球化不变式
+         运行期就取不到该编码。发布用的 RID / SelfContained / PublishSingleFile 一律由 build.ps1
+         在命令行传，不放这里 —— 放这里会让日常 `dotnet test` 也变成 RID 构建。 -->
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- LogicalName 写死：单文件 exe 里靠 BaseDirectory 找旁边的文件是找不到的（解压目录随机），
+         资源只能按名字从程序集里取，所以名字必须是个定值而不是"路径点出来的默认名"。
+         只嵌这两个小的（ico 106KB + png 84KB）；1.4MB 的原图留作生成素材，不进交付物。 -->
+    <EmbeddedResource Include="..\..\assets\app.ico" LogicalName="ZutWifi.app.ico" />
+    <EmbeddedResource Include="..\..\assets\logo-256.png" LogicalName="ZutWifi.logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Task 6 起测试需要验证 internal 的 DecodePortalError/IsRedirect（Task 5 报告 §6.7 约定届时再开） -->
+    <InternalsVisibleTo Include="ZutWifi.Tests" />
+  </ItemGroup>
+</Project>

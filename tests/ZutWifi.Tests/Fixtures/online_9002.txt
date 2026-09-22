@@ -1,0 +1,6 @@
+HTTP/1.1 200 OK
+Server: DrcomServer1.0
+Content-Length: 798
+Content-type: text/html; charset=gbk
+
+<html><head><title>Logout</title> 	<SCRIPT language=javascript> s1=020;sec=4211;uf=0;df=0; url1='http://1.1.1.1:9002/0' ;url2='http://1.1.1.1/F.htm' ; s2=0;

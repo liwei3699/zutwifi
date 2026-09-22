@@ -1,0 +1,4 @@
+HTTP/1.1 302 Redirect
+Server: DrcomServer1.0
+Content-Length: 0
+Location: http://1.1.1.1

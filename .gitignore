@@ -1,0 +1,17 @@
+bin/
+obj/
+publish/
+*.user
+dist/ZutWifi.exe
+dist/ZutWifi.zip
+登录/
+注销/
+
+.superpowers/
+spike/
+
+# 各人自己的图标来源图（校徽等）：本地构建时放进这里，仓库与公开历史里都不该带机构的标志
+assets/logo.png
+
+# 公开发布用的干净快照（独立 git 仓库，不入库）
+publish-repo/
